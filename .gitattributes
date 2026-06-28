@@ -1,0 +1,20 @@
+* text=auto
+
+*.md text eol=lf
+*.m text eol=lf
+*.py text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+.editorconfig text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+*.mat binary
+*.pdf binary
+*.docx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tif binary
+*.tiff binary
+*.zip binary

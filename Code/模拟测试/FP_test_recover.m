@@ -1,4 +1,4 @@
-function [] = FP_test_recover(imlow_HDR, kx, ky, NAt, spsize, wlength, NA_obj, z, opts, O)
+function [] = FP_test_recover(imlow_HDR, kx, ky, NAt, spsize, psize, wlength, NA_obj, z, opts, O)
 
 % Display raw images
 figure();
@@ -9,8 +9,8 @@ title(['raw image ' num2str(1)]);
 %% Reconstruct by FP algorithm
 %NA          = 0.1;      % objective NA
 %spsize      = 1.845e-6; % pixel size of low-res image on sample plane, in meter
-upsmp_ratio = 4;        % upsampling ratio
-psize       = spsize/upsmp_ratio; % pixel size of high-res image on sample plane, in meter
+%upsmp_ratio = 4;        % upsampling ratio
+%psize       = spsize/upsmp_ratio; % pixel size of high-res image on sample plane, in meter
 arraysize = 10; % side length of lit LED array
 
 used_idx = 1:1:arraysize^2; % choose which raw image is used, for example, 1:2:arraysize^2 means do FPM recovery with No1 image, No3 image, No5 image......
@@ -40,6 +40,6 @@ data_name = 'FP_rand';
 out_dir = 'Results';
 mkdir(out_dir); addpath(out_dir);
 out_name = [data_name '_result.mat'];
-save([out_dir,'\',out_name],'him','fprobe','tt','imlow_HDR1','ssim_abs','ssim_angle'); 
+save([out_dir,'\',out_name],'him','fprobe','tt','imlow_HDR1','ssim_abs','ssim_angle');
 %}
 end

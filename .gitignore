@@ -1,0 +1,65 @@
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# MATLAB temporary and generated files
+*.asv
+*.m~
+*.fig
+*.mlx.bak
+slprj/
+*.mex*
+
+# Python temporary files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local raw acquisition data and generated outputs
+Code/Raw_input/**
+!Code/Raw_input/
+!Code/Raw_input/README.md
+
+Code/Results/**
+!Code/Results/
+!Code/Results/README.md
+
+Results/**
+!Results/
+!Results/README.md
+
+# Simulation and report render outputs
+Code/模拟测试/report_render/**
+Code/模拟测试/**/*.ppm
+Code/模拟测试/**/*.zip
+Code/模拟测试/*result.mat
+Code/模拟测试/nonideal_center_brightfield_metrics.json
+Code/模拟测试/0424/**
+Code/模拟测试/对比图_Version1/**
+
+# Large or rights-sensitive document binaries.
+# Keep README/index files in these directories; add PDFs/docx intentionally with git add -f only after rights review.
+Original Paper/*.pdf
+Reference/*.pdf
+Differential Phase Contrast (DPC)/*.pdf
+Report/*.docx
+Notes/*.docx
+
+# Local scratch exports
+exports/
+scratch/
+tmp/
+temp/
