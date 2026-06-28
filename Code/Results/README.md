@@ -24,4 +24,4 @@ Code/Results/Calibration/<batch>/
 
 ## 同步策略
 
-该目录默认被 `.gitignore` 忽略，只保留本 README。需要公开结果时，优先提交压缩后的关键图像和指标；大体积 `.mat` 建议发布到 GitHub Releases、Zenodo、OSF 或网盘，并记录代码 commit、输入数据和 preset。
+该目录用于运行期输出，建议定期筛选关键 PNG 图像复制到根目录 `Results/`。大型 `.mat`、压缩包和渲染中间文件不进入主仓库；需要公开完整数据时，建议发布到 GitHub Releases、Zenodo、OSF 或网盘，并记录代码 commit、输入数据和 preset。

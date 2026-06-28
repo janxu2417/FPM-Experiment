@@ -35,10 +35,10 @@ FPM-Experiment/
 │   ├── Led_intensity_correction_0529_legacy/
 │   ├── function/                 # LED 几何、波矢、Zernike、共享配置等函数
 │   ├── Data/                     # 小型样例数据
-│   ├── Raw_input/                # 运行期原始采集图像和预处理输入，默认不纳入公开同步
-│   ├── Results/                  # 运行期重建和标定输出，默认不纳入公开同步
+│   ├── Raw_input/                # 运行期原始采集图像和预处理输入，本地管理
+│   ├── Results/                  # 运行期重建和标定输出，大型中间数据本地管理
 │   └── 模拟测试/                 # 仿真、DPC 和分辨率 benchmark
-├── Results/                      # 根目录本地结果归档，默认不纳入公开同步
+├── Results/                      # 轻量结果图和诊断图归档
 ├── Notes/                        # 论文笔记、实验笔记、翻译草稿
 ├── Original Paper/               # 原始论文 PDF 本地资料
 ├── Reference/                    # 综述、方法拓展和参考论文
@@ -83,11 +83,12 @@ MATLAB 运行方式：
 
 为了让 GitHub 主仓库保持可读、可复现、可维护，本仓库采用以下策略：
 
-- 源码、配置、说明文档和小型样例数据可以进入主仓库；
-- `Results/` 和运行期可能生成的 `Code/Results/` 中的重建 `.mat`、标定 `.mat`、渲染图和中间结果默认不进入主仓库；
-- `Code/Raw_input/` 中的相机原始采集图像默认不进入主仓库；
-- 论文 PDF、Word 报告和翻译版 PDF 的版权状态需要单独确认，公开同步时建议只提交索引和阅读笔记；
-- 大体积公开数据建议使用 GitHub Releases、Zenodo、OSF 或网盘，并在 README 中给出下载链接和校验信息。
+- 源码、配置、说明文档、小型样例数据、轻量结果图和报告 PDF 可以进入主仓库；
+- `Results/` 中保留当前筛选后的 PNG 结果图和诊断图，便于直接查看复现实验进展；
+- `Results/` 和 `Code/Results/` 中的大型 `.mat`、压缩包和渲染中间文件不进入主仓库；
+- `Code/Raw_input/` 中的相机原始采集图像作为本地实验数据管理；
+- 论文 PDF、翻译版 PDF 和 Word 报告源文件的版权或编辑状态需要单独确认，公开同步时优先提交索引、阅读笔记和 PDF 导出版；
+- 后续若需要发布完整大型数据，可使用 GitHub Releases、Zenodo、OSF 或网盘，并给出下载链接和校验信息。
 
 相关边界说明见 [NOTICE.md](NOTICE.md)。
 
@@ -115,7 +116,7 @@ git commit -m "docs: organize FPM experiment repository"
 git push origin main
 ```
 
-如果需要同步源码重构或新增代码，请先用 `git status --short` 检查将要提交的文件，避免把 `Results`、`Code/Results`、原始图像、论文 PDF 或 Word 报告误加入提交。
+如果需要同步源码重构或新增数据，请先用 `git status --short` 检查将要提交的文件，避免把原始图像、大型 `.mat`、论文 PDF 或 Word 源文件误加入提交。
 
 ## 项目状态
 

@@ -12,8 +12,8 @@
 | `Led_intensity_correction_0529_legacy/` | 0529 批次旧版 LED 光强修正脚本 |
 | `function/` | 几何、波矢、Zernike、共享配置和 manifest 辅助函数 |
 | `Data/` | 小型样例数据和示例图像 |
-| `Raw_input/` | 运行期原始采集图像和预处理输入，默认不提交到 GitHub |
-| `Results/` | 运行期重建和标定输出，默认不提交到 GitHub |
+| `Raw_input/` | 运行期原始采集图像和预处理输入，本地管理 |
+| `Results/` | 运行期重建和标定输出，大型中间数据本地管理 |
 | `Transfer_legacy/` | 旧版格式转换脚本 |
 | `模拟测试/` | FPM/DPC 仿真、分辨率 benchmark 和报告生成脚本 |
 
@@ -46,5 +46,5 @@
 ## 重要约定
 
 - `fpm_0619_shared_config.m` 是 0619 批次的共享参数入口，预处理和重建都应优先从这里读取批次、光学、几何、标定和重建参数。
-- `Results/`、运行期可能生成的 `Code/Results/` 和 `Code/Raw_input/` 主要是本地实验资产，不建议直接提交到主仓库。
+- 根目录 `Results/` 可保存筛选后的轻量结果图；`Code/Results/`、`Code/Raw_input/` 和大型 `.mat` 主要作为本地实验资产管理。
 - 新增实验批次时，优先新增 preset，而不是复制多份硬编码脚本。

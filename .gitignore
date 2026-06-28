@@ -37,9 +37,10 @@ Code/Results/**
 !Code/Results/
 !Code/Results/README.md
 
-Results/**
-!Results/
-!Results/README.md
+# Keep curated result figures in the repository, but exclude large intermediates.
+Results/**/*.mat
+Results/**/*.zip
+Results/**/*.ppm
 
 # Simulation and report render outputs
 Code/模拟测试/report_render/**
@@ -51,7 +52,7 @@ Code/模拟测试/0424/**
 Code/模拟测试/对比图_Version1/**
 
 # Large or rights-sensitive document binaries.
-# Keep README/index files in these directories; add PDFs/docx intentionally with git add -f only after rights review.
+# Keep README/index files and exported reports in the repository; keep editable sources local.
 Original Paper/*.pdf
 Reference/*.pdf
 Differential Phase Contrast (DPC)/*.pdf
