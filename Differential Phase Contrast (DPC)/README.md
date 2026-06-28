@@ -21,3 +21,11 @@ PDF 原文默认作为本地阅读资料管理。公开同步时建议提交：
 - 自己整理的阅读笔记；
 - DOI/链接索引；
 - 与 FPM 实验设计直接相关的参数摘录。
+
+## 本地 PDF 索引（不发布）
+
+以下 PDF 仅作为本地阅读资料，不随 GitHub 仓库发布；公开仓库保留文件名索引，便于按题名自行检索原文或引用信息。
+
+- `Quantitative differential phase contrast imaging in an LED array microscope 2015.pdf`
+- `Quantitative phase-gradient imaging with AIDPC.pdf`
+- `发光二极管阵列显微镜中的实时明场、暗场和相差成像(2014)Tian L., Wang J., Waller L..pdf`
